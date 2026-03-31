@@ -25,7 +25,6 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
   const [isAccessPasswordModalOpen, setIsAccessPasswordModalOpen] = useState(false);
-  const [isAnnouncementModalOpen, setIsAnnouncementModalOpen] = useState(true);
   const [generatedCode, setGeneratedCode] = useState('');
   const [elements, setElements] = useState([]);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -607,7 +606,7 @@ export default function Home() {
       />
 
       {/* Announcement Modal */}
-      {isAnnouncementModalOpen && (
+      {0 && isAnnouncementModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 overflow-hidden">
             <div className="px-6 py-4 bg-blue-600">
@@ -625,14 +624,6 @@ export default function Home() {
                   AI-Draw-Nexus
                 </a>
               </p>
-            </div>
-            <div className="px-6 py-4 bg-gray-50 flex justify-end">
-              <button
-                onClick={() => setIsAnnouncementModalOpen(false)}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-              >
-                我知道了
-              </button>
             </div>
           </div>
         </div>
